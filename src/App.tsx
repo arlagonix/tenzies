@@ -1,12 +1,9 @@
-// React
 import { useEffect } from "react";
 
-// Components
 import Die from "./components/Die";
 import Confetti from "react-confetti";
 import ToggleSwitch from "./components/ToggleSwitch";
 
-// Miscellaneous
 import Icons from "./styles/Icons";
 import useDice from "./hooks/useDice";
 import useStats from "./hooks/useStats";
@@ -15,7 +12,6 @@ import useDarkMode from "./hooks/useDarkMode";
 import useWindowSize from "./hooks/useWindowSize";
 import { generateNewDie, allNewDice } from "./utils/generateDies";
 
-// styled-components
 import GlobalStyle from "./styles/GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./styles/Themes";
@@ -33,18 +29,21 @@ import {
   StyledNumberHighlight,
 } from "./App.styled";
 
-export default function App({ hideLoader }: any) {
+function App({ hideLoader }: any) {
   useEffect(hideLoader, []);
 
   const windowSize = useWindowSize();
-  const [stats, setStats] = useStats();
-  const [tenzies, setTenzies] = useTenzies();
-  const [dice, setDice, activateDice] = useDice();
-  const [isDarkMode, toggleDarkMode] = useDarkMode();
+  const { stats, setStats } = useStats();
+  const { tenzies, setTenzies } = useTenzies();
+  const { dice, setDice, activateDice } = useDice();
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   useEffect(() => {
     // Condition is true only in case of victory
-    if (!tenzies && dice.every((die) => die.active && die.value === dice[0].value)) {
+    if (
+      !tenzies &&
+      dice.every((die) => die.active && die.value === dice[0].value)
+    ) {
       setStats((prev) => {
         return {
           ...prev,
@@ -91,9 +90,11 @@ export default function App({ hideLoader }: any) {
       )}
       <StyledH1>Tenzies</StyledH1>
       <StyledDescription>
-        Roll until <StyledTextHighlight>all dice are the same</StyledTextHighlight>. Click each die
-        {/* */} <StyledTextHighlight>to freeze it</StyledTextHighlight> at its current value between
-        rolls.
+        Roll until{" "}
+        <StyledTextHighlight>all dice are the same</StyledTextHighlight>. Click
+        each die
+        {/* */} <StyledTextHighlight>to freeze it</StyledTextHighlight> at its
+        current value between rolls.
       </StyledDescription>
       <StyledPlayZone>
         <StyledDieContainer>
@@ -146,9 +147,14 @@ export default function App({ hideLoader }: any) {
       <StyledContainer>
         <StyledContainerItem>
           <p>Dark Mode</p>
-          <ToggleSwitch checkedHanlder={isDarkMode} onChangeHandler={toggleDarkMode} />
+          <ToggleSwitch
+            checkedHanlder={isDarkMode}
+            onChangeHandler={toggleDarkMode}
+          />
         </StyledContainerItem>
       </StyledContainer>
     </ThemeProvider>
   );
 }
+
+export default App;

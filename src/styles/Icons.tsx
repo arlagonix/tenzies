@@ -33,7 +33,6 @@ const Icons = {
       alt="Icon in a form of two arrows moving in a circle"
       width="24"
       height="24"
-      loading="lazy"
       draggable={false}
     />
   ),
@@ -43,7 +42,6 @@ const Icons = {
       alt="Icon of a play button in a triangle form"
       width="24"
       height="24"
-      loading="lazy"
       draggable={false}
     />
   ),
@@ -53,7 +51,6 @@ const Icons = {
       alt="Icon of a crown"
       width="30"
       height="24"
-      loading="lazy"
       draggable={false}
     />
   ),
@@ -63,7 +60,6 @@ const Icons = {
       alt="Active dice with one dot"
       width="48"
       height="48"
-      loading="lazy"
       draggable={false}
     />
   ),
@@ -73,7 +69,6 @@ const Icons = {
       alt="Inactive dice with one dot"
       width="48"
       height="48"
-      loading="lazy"
       draggable={false}
     />
   ),
@@ -83,7 +78,6 @@ const Icons = {
       alt="Inactive dice with one dot"
       width="48"
       height="48"
-      loading="lazy"
       draggable={false}
     />
   ),
@@ -93,7 +87,6 @@ const Icons = {
       alt="Active dice with two dots"
       width="48"
       height="48"
-      loading="lazy"
       draggable={false}
     />
   ),
@@ -103,7 +96,6 @@ const Icons = {
       alt="Inactive dice with two dots"
       width="48"
       height="48"
-      loading="lazy"
       draggable={false}
     />
   ),
@@ -113,7 +105,6 @@ const Icons = {
       alt="Inactive dice with two dots"
       width="48"
       height="48"
-      loading="lazy"
       draggable={false}
     />
   ),
@@ -123,7 +114,6 @@ const Icons = {
       alt="Active dice with three dots"
       width="48"
       height="48"
-      loading="lazy"
       draggable={false}
     />
   ),
@@ -133,7 +123,6 @@ const Icons = {
       alt="Inactive dice with three dots"
       width="48"
       height="48"
-      loading="lazy"
       draggable={false}
     />
   ),
@@ -143,7 +132,6 @@ const Icons = {
       alt="Inactive dice with three dots"
       width="48"
       height="48"
-      loading="lazy"
       draggable={false}
     />
   ),
@@ -162,7 +150,6 @@ const Icons = {
       alt="Inactive dice with four dots"
       width="48"
       height="48"
-      loading="lazy"
       draggable={false}
     />
   ),
@@ -181,7 +168,6 @@ const Icons = {
       alt="Active dice with five dots"
       width="48"
       height="48"
-      loading="lazy"
       draggable={false}
     />
   ),
@@ -191,7 +177,6 @@ const Icons = {
       alt="Inactive dice with five dots"
       width="48"
       height="48"
-      loading="lazy"
       draggable={false}
     />
   ),
@@ -201,7 +186,6 @@ const Icons = {
       alt="Inactive dice with five dots"
       width="48"
       height="48"
-      loading="lazy"
       draggable={false}
     />
   ),
@@ -220,7 +204,6 @@ const Icons = {
       alt="Inactive dice with six dots"
       width="48"
       height="48"
-      loading="lazy"
       draggable={false}
     />
   ),
@@ -230,7 +213,6 @@ const Icons = {
       alt="Inactive dice with six dots"
       width="48"
       height="48"
-      loading="lazy"
       draggable={false}
     />
   ),

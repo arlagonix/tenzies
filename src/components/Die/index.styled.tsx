@@ -17,4 +17,8 @@ export const StyledDie = styled.div`
     scale: 0.95;
     translate: 0px 0px;
   }
+
+  img {
+    pointer-events: none;
+  }
 `;

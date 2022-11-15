@@ -2,11 +2,16 @@ import type { IDie } from "../components/Die/index.types";
 import { useState, useEffect } from "react";
 import { allNewDice } from "../utils/generateDies";
 
-export default function useDice(): [
-  IDie[],
-  React.Dispatch<React.SetStateAction<IDie[]>>,
-  typeof activateDice
-] {
+interface IUseDice {
+  /** An array of dice */
+  dice: IDie[];
+  /** Setter for dice */
+  setDice: React.Dispatch<React.SetStateAction<IDie[]>>;
+  /** Acitivate or deactivate a die with corresponding id */
+  activateDice: (id: string) => void;
+}
+
+export default function useDice(): IUseDice {
   const [dice, setDice] = useState<IDie[]>(
     () => JSON.parse(localStorage.getItem("dice") ?? "null") ?? allNewDice()
   );
@@ -23,5 +28,5 @@ export default function useDice(): [
     );
   }
 
-  return [dice, setDice, activateDice];
+  return { dice, setDice, activateDice };
 }
