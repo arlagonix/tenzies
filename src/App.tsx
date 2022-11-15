@@ -10,7 +10,7 @@ import useStats from "./hooks/useStats";
 import useTenzies from "./hooks/useTenzies";
 import useDarkMode from "./hooks/useDarkMode";
 import useWindowSize from "./hooks/useWindowSize";
-import { generateNewDie, allNewDice } from "./utils/generateDies";
+import { regenerateDie } from "./utils/generateDies";
 
 import GlobalStyle from "./styles/GlobalStyle";
 import { ThemeProvider } from "styled-components";
@@ -59,7 +59,7 @@ function App({ hideLoader }: any) {
     if (!tenzies) {
       setDice((oldDice) =>
         oldDice.map((die) => {
-          return die.active ? die : generateNewDie();
+          return die.active ? die : regenerateDie(die);
         })
       );
       setStats((prev) => ({
@@ -68,7 +68,7 @@ function App({ hideLoader }: any) {
       }));
     } else {
       setTenzies(false);
-      setDice(allNewDice());
+      setDice(dice.map((die) => regenerateDie(die, false)));
       setStats((prev) => ({
         ...prev,
         rollsNumber: 0,
