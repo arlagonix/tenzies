@@ -92,7 +92,7 @@ Figma prototype: https://www.figma.com/file/0HbMUVtybRaI1SFtDlcRzq/Tenzies
 ## 📁 File Structure
 
 ```Markdown
-├── 📁 build                  Files of the build solution
+├── 📁 build                  Files of the built solution
 |
 ├── 📁 docs                   Additional information, documentation 
 │   └── 📁 results            Screenshots of how the application works after being fully developed
